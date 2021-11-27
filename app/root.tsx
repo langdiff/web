@@ -3,6 +3,8 @@ import type { LinksFunction } from "remix";
 
 import globalStylesUrl from "~/styles/global.css";
 import darkStylesUrl from "~/styles/dark.css";
+import tailwindUrl from "~/styles/tailwind.css";
+
 import Document from "../components/Document";
 import Layout from "../components/Layout";
 
@@ -10,6 +12,7 @@ import Layout from "../components/Layout";
 export let links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: globalStylesUrl },
+    { rel: "stylesheet", href: tailwindUrl },
     {
       rel: "stylesheet",
       href: darkStylesUrl,
