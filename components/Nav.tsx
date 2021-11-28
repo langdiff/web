@@ -2,57 +2,69 @@ import { Link } from "remix";
 
 export default function Nav() {
   return (
-    <div className="flex flex-wrap py-2">
-      <div className="w-full px-4">
-        <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-indigo-800 rounded">
-          <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-            <div className="w-full relative flex justify-between lg:w-auto px-4 lg:static lg:block lg:justify-start">
-              <div className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white">
-                <Link to="/">LangDiff</Link>
-              </div>
-              <button
-                className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-                type="button"
+    <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-red-500 mb-3">
+      <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
+        <div className="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
+          <a
+            className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+            href="#pablo"
+          >
+            red Color
+          </a>
+          <button
+            className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            type="button"
+          >
+            <span className="block relative w-6 h-px rounded-sm bg-white"></span>
+            <span className="block relative w-6 h-px rounded-sm bg-white mt-1"></span>
+            <span className="block relative w-6 h-px rounded-sm bg-white mt-1"></span>
+          </button>
+        </div>
+        <div
+          className="lg:flex flex-grow items-center"
+          id="example-navbar-warning"
+        >
+          <ul className="flex flex-col lg:flex-row list-none mr-auto">
+            <li className="nav-item">
+              <a
+                className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                href="#pablo"
               >
-                <span className="block relative w-6 h-px rounded-sm bg-white"></span>
-                <span className="block relative w-6 h-px rounded-sm bg-white mt-1"></span>
-                <span className="block relative w-6 h-px rounded-sm bg-white mt-1"></span>
-              </button>
+                <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75" />
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                href="#pablo"
+              >
+                <i className="fab fa-twitter text-lg leading-lg text-white opacity-75" />{" "}
+                <span className="ml-2">Tweet</span>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                href="#pablo"
+              >
+                <span className="ml-2">Settings</span>
+              </a>
+            </li>
+          </ul>
+          <div className="relative flex w-full sm:w-7/12 md:w-5/12 px-4 flex-wrap items-stretch lg:ml-auto">
+            <div className="flex">
+              <span className="font-normal leading-snug flex text-center white-space-no-wrap border border-solid border-red-600 rounded-full text-sm bg-red-100 items-center rounded-r-none pl-2 py-1 text-red-800 border-r-0 placeholder-red-300">
+                <i className="fas fa-search"></i>
+              </span>
             </div>
-            <div
-              className="flex lg:flex-grow items-center"
-              id="example-navbar-info"
-            >
-              <ul className="flex flex-col lg:flex-row list-none ml-auto">
-                <li className="nav-item">
-                  <a
-                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                    href="#pablo"
-                  >
-                    Discover
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                    href="#pablo"
-                  >
-                    Profile
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                    href="#pablo"
-                  >
-                    Settings
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <input
+              type="text"
+              className="px-2 py-1 h-8 border border-solid  border-red-600 rounded-full text-sm leading-snug text-red-700 bg-red-100 shadow-none outline-none focus:outline-none w-full font-normal rounded-l-none flex-1 border-l-0 placeholder-red-300"
+              placeholder="Search red"
+            />
           </div>
-        </nav>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 }
