@@ -42,6 +42,84 @@ export default function Index() {
           <code>app/routes/demos</code> and <code>app/styles/demos</code>{" "}
           folders when you're ready to turn this into your next project.
         </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
+          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
+          praesentium cupiditate facere distinctio ad natus asperiores velit,
+          assumenda minima eaque modi?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
+          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
+          praesentium cupiditate facere distinctio ad natus asperiores velit,
+          assumenda minima eaque modi?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
+          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
+          praesentium cupiditate facere distinctio ad natus asperiores velit,
+          assumenda minima eaque modi?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
+          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
+          praesentium cupiditate facere distinctio ad natus asperiores velit,
+          assumenda minima eaque modi?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
+          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
+          praesentium cupiditate facere distinctio ad natus asperiores velit,
+          assumenda minima eaque modi?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
+          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
+          praesentium cupiditate facere distinctio ad natus asperiores velit,
+          assumenda minima eaque modi?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
+          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
+          praesentium cupiditate facere distinctio ad natus asperiores velit,
+          assumenda minima eaque modi?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
+          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
+          praesentium cupiditate facere distinctio ad natus asperiores velit,
+          assumenda minima eaque modi?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
+          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
+          praesentium cupiditate facere distinctio ad natus asperiores velit,
+          assumenda minima eaque modi?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
+          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
+          praesentium cupiditate facere distinctio ad natus asperiores velit,
+          assumenda minima eaque modi?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
+          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
+          praesentium cupiditate facere distinctio ad natus asperiores velit,
+          assumenda minima eaque modi?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
+          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
+          praesentium cupiditate facere distinctio ad natus asperiores velit,
+          assumenda minima eaque modi?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
+          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
+          praesentium cupiditate facere distinctio ad natus asperiores velit,
+          assumenda minima eaque modi?
+        </p>
       </main>
     </div>
   );

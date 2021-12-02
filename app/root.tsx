@@ -11,13 +11,13 @@ import Layout from "../components/Layout";
 // https://remix.run/api/app#links
 export let links: LinksFunction = () => {
   return [
-    { rel: "stylesheet", href: globalStylesUrl },
     { rel: "stylesheet", href: tailwindUrl },
-    {
-      rel: "stylesheet",
-      href: darkStylesUrl,
-      media: "(prefers-color-scheme: dark)",
-    },
+    // { rel: "stylesheet", href: globalStylesUrl },
+    // {
+    //   rel: "stylesheet",
+    //   href: darkStylesUrl,
+    //   media: "(prefers-color-scheme: dark)",
+    // },
   ];
 };
 
