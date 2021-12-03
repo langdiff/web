@@ -1,9 +1,8 @@
 import { Outlet, useCatch } from "remix";
 import type { LinksFunction } from "remix";
 
-import globalStylesUrl from "~/styles/global.css";
-import darkStylesUrl from "~/styles/dark.css";
 import tailwindUrl from "~/styles/tailwind.css";
+import interFont from "~/styles/inter.css";
 
 import Document from "../components/Document";
 import Layout from "../components/Layout";
@@ -12,12 +11,7 @@ import Layout from "../components/Layout";
 export let links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: tailwindUrl },
-    // { rel: "stylesheet", href: globalStylesUrl },
-    // {
-    //   rel: "stylesheet",
-    //   href: darkStylesUrl,
-    //   media: "(prefers-color-scheme: dark)",
-    // },
+    { rel: "stylesheet", href: interFont },
   ];
 };
 

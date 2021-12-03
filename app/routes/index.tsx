@@ -17,8 +17,8 @@ export let loader: LoaderFunction = () => {
 // https://remix.run/api/conventions#meta
 export let meta: MetaFunction = () => {
   return {
-    title: "Remix Starter",
-    description: "Welcome to remix!",
+    title: "LangDiff.com | Show the diff between languages!",
+    description: "Show the diff between languages!",
   };
 };
 
@@ -41,78 +41,6 @@ export default function Index() {
           Check out all the demos in this starter, and then just delete the{" "}
           <code>app/routes/demos</code> and <code>app/styles/demos</code>{" "}
           folders when you're ready to turn this into your next project.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
-          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
-          praesentium cupiditate facere distinctio ad natus asperiores velit,
-          assumenda minima eaque modi?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
-          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
-          praesentium cupiditate facere distinctio ad natus asperiores velit,
-          assumenda minima eaque modi?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
-          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
-          praesentium cupiditate facere distinctio ad natus asperiores velit,
-          assumenda minima eaque modi?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
-          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
-          praesentium cupiditate facere distinctio ad natus asperiores velit,
-          assumenda minima eaque modi?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
-          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
-          praesentium cupiditate facere distinctio ad natus asperiores velit,
-          assumenda minima eaque modi?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
-          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
-          praesentium cupiditate facere distinctio ad natus asperiores velit,
-          assumenda minima eaque modi?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
-          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
-          praesentium cupiditate facere distinctio ad natus asperiores velit,
-          assumenda minima eaque modi?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
-          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
-          praesentium cupiditate facere distinctio ad natus asperiores velit,
-          assumenda minima eaque modi?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
-          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
-          praesentium cupiditate facere distinctio ad natus asperiores velit,
-          assumenda minima eaque modi?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
-          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
-          praesentium cupiditate facere distinctio ad natus asperiores velit,
-          assumenda minima eaque modi?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
-          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
-          praesentium cupiditate facere distinctio ad natus asperiores velit,
-          assumenda minima eaque modi?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
-          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
-          praesentium cupiditate facere distinctio ad natus asperiores velit,
-          assumenda minima eaque modi?
         </p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa

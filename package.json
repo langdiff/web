@@ -7,6 +7,7 @@
     "build": "tailwind:build && remix build",
     "dev": "concurrently \"npm:dev:tailwind\" \"npm:dev:web\"",
     "dev:web": "remix dev",
+    "dev:web-build": "remix build",
     "dev:tailwind": "tailwindcss --output ./app/styles/tailwind.css --config tailwind.config.js --watch",
     "tailwind:build": "tailwindcss --output ./app/styles/tailwind.css --config tailwind.config.js --minify",
     "postinstall": "remix setup node",
