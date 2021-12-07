@@ -2,228 +2,168 @@ import { Link } from "remix";
 
 export default function Nav() {
   return (
-    <nav className="bg-white shadow dark:bg-gray-800">
-      <div className="container px-6 py-4 mx-auto">
-        <div className="md:flex md:items-center md:justify-between">
-          <div className="flex items-center justify-between">
-            <div className="text-xl font-semibold text-gray-700">
-              <a
-                className="text-2xl font-bold text-gray-800 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
-                href="#"
-              >
-                Brand
+    <section className="py-8 px-4 lg:px-10 bg-white">
+      <nav className="relative flex justify-between items-center">
+        <a className="text-2xl text-gray-900 font-bold" href="#">
+          <img
+            className="h-7"
+            src="zospace-assets/logos/zospace-dark-logo.svg"
+            alt=""
+            width="auto"
+          />
+        </a>
+        <div className="lg:hidden">
+          <button className="navbar-burger flex items-center p-3 hover:bg-gray-50 text-gray-900 rounded">
+            <svg
+              className="w-10 h-3"
+              width="39"
+              height="13"
+              viewBox="0 0 39 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="39" height="2" rx="1" fill="currentColor"></rect>
+              <rect
+                x="19"
+                y="11"
+                width="20"
+                height="2"
+                rx="1"
+                fill="currentColor"
+              ></rect>
+              <title>Mobile menu</title>
+            </svg>
+          </button>
+        </div>
+        <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+          <ul className="flex items-center space-x-16 text-lg font-bold">
+            <li>
+              <a className="hover:underline" href="#">
+                Product
               </a>
-            </div>
-
-            {/* <!-- Mobile menu button --> */}
-            <div className="flex md:hidden">
-              <button
-                type="button"
-                className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
-                aria-label="toggle menu"
+            </li>
+            <li>
+              <a className="hover:underline" href="#">
+                Story
+              </a>
+            </li>
+            <li>
+              <a className="hover:underline" href="#">
+                Features
+              </a>
+            </li>
+            <li>
+              <a className="hover:underline" href="#">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="hidden lg:block">
+          <div className="max-w-sm flex items-center bg-blue-50 rounded-full">
+            <input
+              className="hidden xl:block pl-6 py-5 rounded-full bg-transparent placeholder-gray-200 font-bold outline-none"
+              type="search"
+              placeholder="Search Now..."
+            />
+            <button className="ml-auto px-4 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
+                <g clip-path="url(#clip0)">
                   <path
-                    fillRule="evenodd"
-                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                    d="M10.5691 0C4.74145 0 0 4.74145 0 10.5691C0 16.3971 4.74145 21.1382 10.5691 21.1382C16.3971 21.1382 21.1382 16.3971 21.1382 10.5691C21.1382 4.74145 16.3971 0 10.5691 0ZM10.5691 19.187C5.81723 19.187 1.95122 15.321 1.95122 10.5691C1.95122 5.81728 5.81723 1.95122 10.5691 1.95122C15.321 1.95122 19.187 5.81723 19.187 10.5691C19.187 15.321 15.321 19.187 10.5691 19.187Z"
+                    fill="white"
                   ></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          {/* <!-- Mobile Menu open: "block", Menu closed: "hidden" --> */}
-          <div className="flex-1 md:flex md:items-center md:justify-between">
-            <div className="flex flex-col -mx-4 md:flex-row md:items-center md:mx-8">
-              <a
-                href="#"
-                className="px-2 py-1 mx-2 mt-2 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded-md md:mt-0 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700"
-              >
-                Join Slack
-              </a>
-              <a
-                href="#"
-                className="px-2 py-1 mx-2 mt-2 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded-md md:mt-0 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700"
-              >
-                Browse Topics
-              </a>
-              <a
-                href="#"
-                className="px-2 py-1 mx-2 mt-2 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded-md md:mt-0 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700"
-              >
-                Random Item
-              </a>
-              <a
-                href="#"
-                className="px-2 py-1 mx-2 mt-2 text-sm font-medium text-gray-700 transition-colors duration-200 transform rounded-md md:mt-0 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700"
-              >
-                Experts
-              </a>
-            </div>
-
-            <div className="flex items-center mt-4 md:mt-0">
-              <button
-                className="hidden mx-4 text-gray-600 md:block dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-400 focus:text-gray-700 dark:focus:text-gray-400 focus:outline-none"
-                aria-label="show notifications"
-              >
-                <svg
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
                   <path
-                    d="M15 17H20L18.5951 15.5951C18.2141 15.2141 18 14.6973 18 14.1585V11C18 8.38757 16.3304 6.16509 14 5.34142V5C14 3.89543 13.1046 3 12 3C10.8954 3 10 3.89543 10 5V5.34142C7.66962 6.16509 6 8.38757 6 11V14.1585C6 14.6973 5.78595 15.2141 5.40493 15.5951L4 17H9M15 17V18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18V17M15 17H9"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-
-              <button
-                type="button"
-                className="flex items-center focus:outline-none"
-                aria-label="toggle profile dropdown"
-              >
-                <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
-                  <img
-                    src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
-                    className="object-cover w-full h-full"
-                    alt="avatar"
-                  />
-                </div>
-
-                <h3 className="mx-2 text-sm font-medium text-gray-700 dark:text-gray-200 md:hidden">
-                  Khatab wedaa
-                </h3>
-              </button>
-            </div>
+                    d="M23.712 22.3346L18.1185 16.7411C17.7374 16.36 17.1201 16.36 16.739 16.7411C16.3578 17.1219 16.3578 17.7398 16.739 18.1207L22.3325 23.7142C22.523 23.9047 22.7725 24 23.0223 24C23.2717 24 23.5214 23.9047 23.712 23.7142C24.0932 23.3334 24.0932 22.7154 23.712 22.3346Z"
+                    fill="white"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="24" height="24" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
           </div>
         </div>
+      </nav>
+      <div className="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+        <div className="navbar-backdrop fixed inset-0 bg-blue-600 opacity-80"></div>
+        <nav className="relative flex flex-col py-8 w-full h-full bg-gray-800 overflow-y-auto">
+          <div className="flex items-center mb-16 pr-6">
+            <a className="ml-10 text-2xl text-white font-bold" href="#">
+              <img
+                className="h-7"
+                src="zospace-assets/logos/zospace-logo.svg"
+                alt=""
+                width="auto"
+              />
+            </a>
+          </div>
+          <div>
+            <ul>
+              <li className="mb-1 px-10">
+                <a
+                  className="block pl-8 py-4 text-xl text-white hover:bg-gray-500 rounded-xl"
+                  href="#"
+                >
+                  Product
+                </a>
+              </li>
+              <li className="mb-1 px-10">
+                <a
+                  className="block pl-8 py-4 text-xl text-white hover:bg-gray-500 rounded-xl"
+                  href="#"
+                >
+                  Story
+                </a>
+              </li>
+              <li className="mb-1 px-10">
+                <a
+                  className="block pl-8 py-4 text-xl text-white hover:bg-gray-500 rounded-xl"
+                  href="#"
+                >
+                  Features
+                </a>
+              </li>
+              <li className="mb-1 px-10">
+                <a
+                  className="block pl-8 py-4 text-xl text-white hover:bg-gray-500 rounded-xl"
+                  href="#"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="mt-auto px-10">
+            <div className="pt-6">
+              <a
+                className="block mb-4 py-4 px-12 text-white text-center font-bold hover:bg-white hover:text-gray-800 border border-gray-50 rounded-full transition duration-200"
+                href="#"
+              >
+                Sign in
+              </a>
+              <a
+                className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
+                href="#"
+              >
+                Sign up
+              </a>
+            </div>
+            <p className="mt-6 mb-4 text-lg text-center text-white">
+              <span>2021 © Zospace. All rights reserved.</span>
+            </p>
+          </div>
+        </nav>
       </div>
-    </nav>
-    // <nav className="flex justify-between bg-gray-900 text-white w-screen">
-    //   <div className="px-5 xl:px-12 py-6 flex w-full items-center">
-    //     <a className="text-3xl font-bold font-heading" href="#">
-    //       {/* <!-- <img className="h-9" src="logo.png" alt="logo"> --> */}
-    //       Logo Here.
-    //     </a>
-    //     <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
-    //       <li>
-    //         <a className="hover:text-gray-200" href="#">
-    //           Home
-    //         </a>
-    //       </li>
-    //       <li>
-    //         <a className="hover:text-gray-200" href="#">
-    //           Catagory
-    //         </a>
-    //       </li>
-    //       <li>
-    //         <a className="hover:text-gray-200" href="#">
-    //           Collections
-    //         </a>
-    //       </li>
-    //       <li>
-    //         <a className="hover:text-gray-200" href="#">
-    //           Contact Us
-    //         </a>
-    //       </li>
-    //     </ul>
-    //     <div className="hidden xl:flex items-center space-x-5 items-center">
-    //       <a className="hover:text-gray-200" href="#">
-    //         <svg
-    //           xmlns="http://www.w3.org/2000/svg"
-    //           className="h-6 w-6"
-    //           fill="none"
-    //           viewBox="0 0 24 24"
-    //           stroke="currentColor"
-    //         >
-    //           <path
-    //             strokeLinecap="round"
-    //             strokeLinejoin="round"
-    //             strokeWidth="2"
-    //             d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-    //           />
-    //         </svg>
-    //       </a>
-    //       <a className="flex items-center hover:text-gray-200" href="#">
-    //         <svg
-    //           xmlns="http://www.w3.org/2000/svg"
-    //           className="h-6 w-6"
-    //           fill="none"
-    //           viewBox="0 0 24 24"
-    //           stroke="currentColor"
-    //         >
-    //           <path
-    //             strokeLinecap="round"
-    //             strokeLinejoin="round"
-    //             strokeWidth="2"
-    //             d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-    //           />
-    //         </svg>
-    //         <span className="flex absolute -mt-5 ml-4">
-    //           <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-400 opacity-75"></span>
-    //           <span className="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
-    //         </span>
-    //       </a>
-    //       <a className="flex items-center hover:text-gray-200" href="#">
-    //         <svg
-    //           xmlns="http://www.w3.org/2000/svg"
-    //           className="h-6 w-6 hover:text-gray-200"
-    //           fill="none"
-    //           viewBox="0 0 24 24"
-    //           stroke="currentColor"
-    //         >
-    //           <path
-    //             strokeLinecap="round"
-    //             strokeLinejoin="round"
-    //             strokeWidth="2"
-    //             d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-    //           />
-    //         </svg>
-    //       </a>
-    //     </div>
-    //   </div>
-
-    //   <a className="xl:hidden flex mr-6 items-center" href="#">
-    //     <svg
-    //       xmlns="http://www.w3.org/2000/svg"
-    //       className="h-6 w-6 hover:text-gray-200"
-    //       fill="none"
-    //       viewBox="0 0 24 24"
-    //       stroke="currentColor"
-    //     >
-    //       <path
-    //         strokeLinecap="round"
-    //         strokeLinejoin="round"
-    //         strokeWidth="2"
-    //         d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-    //       />
-    //     </svg>
-    //     <span className="flex absolute -mt-5 ml-4">
-    //       <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-400 opacity-75"></span>
-    //       <span className="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
-    //     </span>
-    //   </a>
-    //   <a className="navbar-burger self-center mr-12 xl:hidden" href="#">
-    //     <svg
-    //       xmlns="http://www.w3.org/2000/svg"
-    //       className="h-6 w-6 hover:text-gray-200"
-    //       fill="none"
-    //       viewBox="0 0 24 24"
-    //       stroke="currentColor"
-    //     >
-    //       <path
-    //         strokeLinecap="round"
-    //         strokeLinejoin="round"
-    //         strokeWidth="2"
-    //         d="M4 6h16M4 12h16M4 18h16"
-    //       />
-    //     </svg>
-    //   </a>
-    // </nav>
+    </section>
   );
 }
