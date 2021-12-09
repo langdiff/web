@@ -1,169 +1,178 @@
-import { Link } from "remix";
+/* This example requires Tailwind CSS v2.0+ */
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { NavLink } from "remix";
 
+const navigation = [
+  { name: "Diffs", to: "/diffs", current: true },
+  { name: "Languages", to: "/languages", current: false },
+  { name: "About", to: "/about", current: false },
+];
+
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(" ");
+}
+const baseStyles = "px-3 py-2 rounded-md text-sm font-medium";
+
+function DropDownMenu() {
+  return (
+    <Menu as="div" className="ml-3 relative">
+      <div>
+        <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+          <span className="sr-only">Open user menu</span>
+          <img
+            className="h-8 w-8 rounded-full"
+            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            alt=""
+          />
+        </Menu.Button>
+      </div>
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+      >
+        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Item>
+            {({ active }) => (
+              <a
+                href="#"
+                className={classNames(
+                  active ? "bg-gray-100" : "",
+                  "block px-4 py-2 text-sm text-gray-700"
+                )}
+              >
+                Your Profile
+              </a>
+            )}
+          </Menu.Item>
+          <Menu.Item>
+            {({ active }) => (
+              <a
+                href="#"
+                className={classNames(
+                  active ? "bg-gray-100" : "",
+                  "block px-4 py-2 text-sm text-gray-700"
+                )}
+              >
+                Settings
+              </a>
+            )}
+          </Menu.Item>
+          <Menu.Item>
+            {({ active }) => (
+              <a
+                href="#"
+                className={classNames(
+                  active ? "bg-gray-100" : "",
+                  "block px-4 py-2 text-sm text-gray-700"
+                )}
+              >
+                Sign out
+              </a>
+            )}
+          </Menu.Item>
+        </Menu.Items>
+      </Transition>
+    </Menu>
+  );
+}
 export default function Nav() {
   return (
-    <section className="py-8 px-4 lg:px-10 bg-white">
-      <nav className="relative flex justify-between items-center">
-        <a className="text-2xl text-gray-900 font-bold" href="#">
-          <img
-            className="h-7"
-            src="zospace-assets/logos/zospace-dark-logo.svg"
-            alt=""
-            width="auto"
-          />
-        </a>
-        <div className="lg:hidden">
-          <button className="navbar-burger flex items-center p-3 hover:bg-gray-50 text-gray-900 rounded">
-            <svg
-              className="w-10 h-3"
-              width="39"
-              height="13"
-              viewBox="0 0 39 13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="39" height="2" rx="1" fill="currentColor"></rect>
-              <rect
-                x="19"
-                y="11"
-                width="20"
-                height="2"
-                rx="1"
-                fill="currentColor"
-              ></rect>
-              <title>Mobile menu</title>
-            </svg>
-          </button>
-        </div>
-        <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
-          <ul className="flex items-center space-x-16 text-lg font-bold">
-            <li>
-              <a className="hover:underline" href="#">
-                Product
-              </a>
-            </li>
-            <li>
-              <a className="hover:underline" href="#">
-                Story
-              </a>
-            </li>
-            <li>
-              <a className="hover:underline" href="#">
-                Features
-              </a>
-            </li>
-            <li>
-              <a className="hover:underline" href="#">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="hidden lg:block">
-          <div className="max-w-sm flex items-center bg-blue-50 rounded-full">
-            <input
-              className="hidden xl:block pl-6 py-5 rounded-full bg-transparent placeholder-gray-200 font-bold outline-none"
-              type="search"
-              placeholder="Search Now..."
-            />
-            <button className="ml-auto px-4 lg:px-10 py-5 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0)">
-                  <path
-                    d="M10.5691 0C4.74145 0 0 4.74145 0 10.5691C0 16.3971 4.74145 21.1382 10.5691 21.1382C16.3971 21.1382 21.1382 16.3971 21.1382 10.5691C21.1382 4.74145 16.3971 0 10.5691 0ZM10.5691 19.187C5.81723 19.187 1.95122 15.321 1.95122 10.5691C1.95122 5.81728 5.81723 1.95122 10.5691 1.95122C15.321 1.95122 19.187 5.81723 19.187 10.5691C19.187 15.321 15.321 19.187 10.5691 19.187Z"
-                    fill="white"
-                  ></path>
-                  <path
-                    d="M23.712 22.3346L18.1185 16.7411C17.7374 16.36 17.1201 16.36 16.739 16.7411C16.3578 17.1219 16.3578 17.7398 16.739 18.1207L22.3325 23.7142C22.523 23.9047 22.7725 24 23.0223 24C23.2717 24 23.5214 23.9047 23.712 23.7142C24.0932 23.3334 24.0932 22.7154 23.712 22.3346Z"
-                    fill="white"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0">
-                    <rect width="24" height="24" fill="white"></rect>
-                  </clipPath>
-                </defs>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </nav>
-      <div className="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
-        <div className="navbar-backdrop fixed inset-0 bg-blue-600 opacity-80"></div>
-        <nav className="relative flex flex-col py-8 w-full h-full bg-gray-800 overflow-y-auto">
-          <div className="flex items-center mb-16 pr-6">
-            <a className="ml-10 text-2xl text-white font-bold" href="#">
-              <img
-                className="h-7"
-                src="zospace-assets/logos/zospace-logo.svg"
-                alt=""
-                width="auto"
-              />
-            </a>
-          </div>
-          <div>
-            <ul>
-              <li className="mb-1 px-10">
-                <a
-                  className="block pl-8 py-4 text-xl text-white hover:bg-gray-500 rounded-xl"
-                  href="#"
+    <Disclosure as="nav" className="bg-gray-800">
+      {({ open }) => (
+        <>
+          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div className="relative flex items-center justify-between h-16">
+              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                {/* Mobile menu button*/}
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                <div className="flex-shrink-0 flex items-center">
+                  <img
+                    className="block lg:hidden h-8 w-auto"
+                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                    alt="Workflow"
+                  />
+                  <img
+                    className="hidden lg:block h-8 w-auto"
+                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                    alt="Workflow"
+                  />
+                </div>
+                <div className="hidden sm:block sm:ml-6">
+                  <div className="flex space-x-4">
+                    {navigation.map((item) => (
+                      <NavLink
+                        key={item.to}
+                        to={item.to}
+                        className={({ isActive }) => {
+                          return isActive
+                            ? classNames("bg-gray-900 text-white", baseStyles)
+                            : classNames(
+                                "text-gray-300 hover:bg-gray-700 hover:text-white",
+                                baseStyles
+                              );
+                        }}
+                      >
+                        {item.name}
+                      </NavLink>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                {/* <button
+                  type="button"
+                  className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 >
-                  Product
-                </a>
-              </li>
-              <li className="mb-1 px-10">
-                <a
-                  className="block pl-8 py-4 text-xl text-white hover:bg-gray-500 rounded-xl"
-                  href="#"
-                >
-                  Story
-                </a>
-              </li>
-              <li className="mb-1 px-10">
-                <a
-                  className="block pl-8 py-4 text-xl text-white hover:bg-gray-500 rounded-xl"
-                  href="#"
-                >
-                  Features
-                </a>
-              </li>
-              <li className="mb-1 px-10">
-                <a
-                  className="block pl-8 py-4 text-xl text-white hover:bg-gray-500 rounded-xl"
-                  href="#"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="mt-auto px-10">
-            <div className="pt-6">
-              <a
-                className="block mb-4 py-4 px-12 text-white text-center font-bold hover:bg-white hover:text-gray-800 border border-gray-50 rounded-full transition duration-200"
-                href="#"
-              >
-                Sign in
-              </a>
-              <a
-                className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
-                href="#"
-              >
-                Sign up
-              </a>
+                  <span className="sr-only">View notifications</span>
+                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                </button> */}
+
+                {/* Profile dropdown */}
+                <DropDownMenu />
+              </div>
             </div>
-            <p className="mt-6 mb-4 text-lg text-center text-white">
-              <span>2021 © Zospace. All rights reserved.</span>
-            </p>
           </div>
-        </nav>
-      </div>
-    </section>
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navigation.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  className={({ isActive }) => {
+                    const base =
+                      "block px-3 py-2 rounded-md text-base font-medium";
+                    return isActive
+                      ? classNames("bg-gray-900 text-white", base)
+                      : classNames(
+                          "text-gray-300 hover:bg-gray-700 hover:text-white",
+                          base
+                        );
+                  }}
+                >
+                  {item.name}
+                </NavLink>
+              ))}
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
   );
 }

@@ -14,7 +14,7 @@ export default function Layout({ children }: LayoutProps) {
       </header>
       {/* Main content */}
       <div className="bg-gray-100 pt-8 lg:pt-20 pb-8">
-        <main className="container mx-auto px-4 ">{children}</main>
+        <main className="container max-w-7xl px-4 mx-auto">{children}</main>
       </div>
       {/* Footer */}
       <Footer />
