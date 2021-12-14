@@ -25,6 +25,15 @@ export let meta: MetaFunction = () => {
 // https://remix.run/guides/routing#index-routes
 export default function Index() {
   let data = useLoaderData<IndexData>();
+  let lorem = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
+          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
+          praesentium cupiditate facere distinctio ad natus asperiores velit,
+          assumenda minima eaque modi?`;
+  const renderLorem = (num: number) => {
+    for (let index = 0; index < num; index++) {
+      return <p>{lorem}</p>;
+    }
+  };
 
   return (
     <div className="">
@@ -42,12 +51,7 @@ export default function Index() {
           <code>app/routes/demos</code> and <code>app/styles/demos</code>{" "}
           folders when you're ready to turn this into your next project.
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam culpa
-          obcaecati, eius, harum ea dolorum deleniti blanditiis debitis
-          praesentium cupiditate facere distinctio ad natus asperiores velit,
-          assumenda minima eaque modi?
-        </p>
+        {renderLorem(10)}
       </main>
     </div>
   );
