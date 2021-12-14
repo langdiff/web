@@ -1,6 +1,14 @@
 node_modules
 
+# Remix specific ignores
 /.cache
 /build
 /public/build
+
+# We build our tailwind.css file on demand, so it is constantly changing
 app/styles/tailwind.css
+
+# Vercel
+.vercel
+.output
+api/build
