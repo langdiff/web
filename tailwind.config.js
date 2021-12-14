@@ -1,6 +1,6 @@
 module.exports = {
   mode: "jit",
-  purge: [
+  content: [
     "./components/**/*.tsx",
     "./app/**/*.tsx",
     "./app/**/*.jsx",
@@ -25,5 +25,5 @@ module.exports = {
   },
   variants: {},
   corePlugins: {},
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
