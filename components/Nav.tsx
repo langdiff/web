@@ -107,7 +107,7 @@ export default function Nav() {
                   <Link to="/" title="Home">
                     <img
                       className="h-8 w-auto"
-                      src="logo.svg"
+                      src="/logo.svg"
                       alt="Langdiff.com logo"
                     />
                   </Link>
@@ -120,7 +120,7 @@ export default function Nav() {
                         to={item.to}
                         className={({ isActive }) => {
                           return isActive
-                            ? classNames("bg-gray-900 text-white", baseStyles)
+                            ? classNames("bg-purple-800 text-white", baseStyles)
                             : classNames(
                                 "text-gray-300 hover:bg-gray-700 hover:text-white",
                                 baseStyles

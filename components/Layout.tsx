@@ -13,13 +13,13 @@ export default function Layout({ children }: LayoutProps) {
         <Nav />
       </header>
       {/* Main content */}
-      <div className="bg-gray-100 pt-8 pb-8">
+      <div className="pt-8 pb-8">
         <main className="container max-w-7xl px-4 mx-auto prose">
           {children}
         </main>
       </div>
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

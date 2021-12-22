@@ -15,7 +15,7 @@ export default function Document({ children, title }: DocumentProps) {
         {title ? <title>{title}</title> : null}
         <Links />
       </head>
-      <body className="antialiased bg-gray-800">
+      <body className="font-sans antialiased text-gray-600 min-h-full flex flex-col">
         {children}
         <ScrollRestoration />
         <Scripts />
