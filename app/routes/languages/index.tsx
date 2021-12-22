@@ -1,4 +1,4 @@
-import { json, LoaderFunction, useLoaderData } from "remix";
+import { json, Link, LoaderFunction, useLoaderData } from "remix";
 import { LanguageData, languages } from "./languages";
 
 export const loader: LoaderFunction = () => {
@@ -13,7 +13,9 @@ export default function Languages() {
       <h1>Languages</h1>
       <ul>
         {data.map((lang) => (
-          <li>{lang.name}</li>
+          <Link to={lang.slug} key={lang.name}>
+            <li>{lang.name}</li>
+          </Link>
         ))}
       </ul>
     </>

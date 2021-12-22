@@ -13,3 +13,7 @@ export const languages: LanguageData[] = [
     slug: "javascript",
   },
 ];
+
+export const getLanguageBySlug = (slug: string) => {
+  return languages.find((x) => x.slug === slug);
+};
