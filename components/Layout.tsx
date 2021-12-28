@@ -14,7 +14,7 @@ export default function Layout({ children }: LayoutProps) {
       </header>
       {/* Main content */}
       <div className="pt-8 pb-8">
-        <main className="container max-w-7xl px-4 mx-auto prose">
+        <main className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 prose">
           {children}
         </main>
       </div>
