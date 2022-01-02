@@ -1,4 +1,4 @@
-import { LoaderFunction, useLoaderData } from "remix";
+import { Form, LoaderFunction, useLoaderData, useSubmit } from "remix";
 
 type LanguageOption = {
   name: string;
@@ -9,6 +9,7 @@ type DiffsType = {
   lang2: string;
   availableLanguages: LanguageOption[];
 };
+
 export const loader: LoaderFunction = ({ request }) => {
   const url = new URL(request.url);
   const lang1 = url.searchParams.get("lang1");
@@ -32,20 +33,35 @@ export const loader: LoaderFunction = ({ request }) => {
 };
 export default function Diffs() {
   const data = useLoaderData<DiffsType>();
+  console.log(JSON.stringify(data));
+  const submit = useSubmit();
+
+  function handleChange(event) {
+    submit(event.currentTarget);
+  }
 
   return (
     <div>
       <h1>Find diffs</h1>
-      {/* Currently Selected: {data.lang1} {data.lang2} */}
-      <form method="get" action="/diffs">
+      Currently Selected: {data.lang1} {data.lang2}
+      <Form method="get" action="/diffs" onChange={handleChange}>
         <div className="flex flex-wrap -mx-8">
           <div className="w-full md:w-1/2 py-4 px-8 mb-4 md:mb-0">
             <label htmlFor="lang1" className="block font-bold">
               Language 1
             </label>
             <select name="lang1" id="lang1">
+              <option value="" disabled selected>
+                Select a language...
+              </option>
               {data.availableLanguages.map((lang) => (
-                <option value={lang.value}>{lang.name}</option>
+                <option
+                  value={lang.value}
+                  selected={lang.value === data.lang1}
+                  key={lang.value}
+                >
+                  {lang.name}
+                </option>
               ))}
             </select>
           </div>
@@ -54,13 +70,23 @@ export default function Diffs() {
               Language 2
             </label>
             <select name="lang2">
+              <option value="" disabled selected>
+                Select a language...
+              </option>
               {data.availableLanguages.map((lang) => (
-                <option value={lang.value}>{lang.name}</option>
+                <option
+                  value={lang.value}
+                  selected={lang.value === data.lang2}
+                  key={lang.value}
+                >
+                  {lang.name}
+                </option>
               ))}
             </select>
           </div>
         </div>
-      </form>
+      </Form>
+      <code>results for lang 1 and lang 2 will show up here..</code>
     </div>
   );
 }
