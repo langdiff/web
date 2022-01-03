@@ -36,8 +36,8 @@ export default function Diffs() {
   console.log(JSON.stringify(data));
   const submit = useSubmit();
 
-  function handleChange(event) {
-    submit(event.currentTarget);
+  function handleChange(event: React.FormEvent<HTMLFormElement>) {
+    submit(event.currentTarget, { replace: true });
   }
 
   return (
