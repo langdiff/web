@@ -24,6 +24,10 @@ export const loader: LoaderFunction = ({ request }) => {
       name: "JavaScript",
       value: "javascript",
     },
+    {
+      name: "Rust",
+      value: "rust",
+    },
   ];
   return {
     lang1: lang1,
@@ -33,7 +37,8 @@ export const loader: LoaderFunction = ({ request }) => {
 };
 export default function Diffs() {
   const data = useLoaderData<DiffsType>();
-  console.log(JSON.stringify(data));
+  console.log(`lang1=${data.lang1} lang2=${data.lang2}`);
+
   const submit = useSubmit();
 
   function handleChange(event: React.FormEvent<HTMLFormElement>) {
@@ -50,16 +55,17 @@ export default function Diffs() {
             <label htmlFor="lang1" className="block font-bold">
               Language 1
             </label>
-            <select name="lang1" id="lang1">
-              <option value="" disabled selected>
+            <select
+              key={data.lang1}
+              name="lang1"
+              id="lang1"
+              defaultValue={data.lang1 || ""}
+            >
+              <option value="" disabled>
                 Select a language...
               </option>
               {data.availableLanguages.map((lang) => (
-                <option
-                  value={lang.value}
-                  selected={lang.value === data.lang1}
-                  key={lang.value}
-                >
+                <option value={lang.value} key={lang.value}>
                   {lang.name}
                 </option>
               ))}
@@ -69,16 +75,17 @@ export default function Diffs() {
             <label htmlFor="lang2" className="block font-bold">
               Language 2
             </label>
-            <select name="lang2">
-              <option value="" disabled selected>
+            <select
+              key={data.lang2}
+              name="lang2"
+              id="lang2"
+              defaultValue={data.lang2 || ""}
+            >
+              <option value="" disabled>
                 Select a language...
               </option>
               {data.availableLanguages.map((lang) => (
-                <option
-                  value={lang.value}
-                  selected={lang.value === data.lang2}
-                  key={lang.value}
-                >
+                <option value={lang.value} key={lang.value}>
                   {lang.name}
                 </option>
               ))}
